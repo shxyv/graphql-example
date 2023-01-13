@@ -1,0 +1,23 @@
+type Query {
+    books: [Book]
+    bookById(id: ID!) : Book
+}
+
+type Mutation {
+    saveBook(book: BookRequest) : Book
+}
+
+input BookRequest {
+    name: String!
+    description: String!
+    authorName: String!
+}
+
+type Book {
+    id: ID!
+    name: String!
+    description: String!
+    authorName: String!
+    createdAt: String!
+    updatedAt: String!
+}
